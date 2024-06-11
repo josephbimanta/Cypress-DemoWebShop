@@ -1,3 +1,5 @@
+import loginPage from "../pageObjects/loginPage"
+
 describe('template spec', () => {
   it('Verify Register Successfully', () => {
     cy.clearCookies()
@@ -94,7 +96,8 @@ describe('template spec', () => {
     cy.clearCookies()
     cy.visit('https://demowebshop.tricentis.com/')
     cy.get('.ico-register').click()
-    cy.get('#FirstName').type('Joseph')
+    loginPage.enterUsername('Joseph')
+    //cy.get('#FirstName').type('Joseph')
     cy.get('#LastName').type('Bimanta')
     cy.get('#Email').type('joseph.qa@gmail.com')
     cy.get('#Password').type('testingaja')
