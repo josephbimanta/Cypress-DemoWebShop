@@ -1,13 +1,29 @@
 class loginPage {
     elements ={
-        inputUsername : () => cy.get('#FirstName')
+        inputEmail : () => cy.get('#Email'),
+        inputPassword : () => cy.get('#Password')
     }
 
-    //method for entering username
-    enterUsername(username)
+    //method for entering Email
+    enterEmail(email)
     {
-      this.elements.inputUsername().clear();
-      this.elements.inputUsername().type(username);
+      this.elements.inputEmail().clear();
+      this.elements.inputEmail().type(email);
+    }
+
+    //method for entering Password
+    enterPassword(password)
+    {
+      this.elements.inputPassword().clear();
+      this.elements.inputPassword().type(password);
+    }
+
+    clickLoginButton(){
+      cy.get('form > .buttons > .button-1').click();
+    }
+
+    verifyLoginSuccessfully(){
+      cy.get('.ico-logout').should('contain.text', 'Log out');
     }
 }
 
