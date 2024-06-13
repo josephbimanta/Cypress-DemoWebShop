@@ -1,7 +1,9 @@
 class loginPage {
     elements ={
         inputEmail : () => cy.get('#Email'),
-        inputPassword : () => cy.get('#Password')
+        inputPassword : () => cy.get('#Password'),
+        getSpan : () => cy.get('span'),
+        getLi : () => cy.get('li')
     }
 
     //method for entering Email
@@ -24,6 +26,16 @@ class loginPage {
 
     verifyLoginSuccessfully(){
       cy.get('.ico-logout').should('contain.text', 'Log out');
+    }
+
+    checkContainsErrorMessage(message){
+      this.elements.getSpan();
+      cy.contains(message);
+    }
+
+    checkMessage(message){
+      this.elements.getLi();
+      cy.contains(message);
     }
 }
 
