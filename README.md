@@ -1,2 +1,3 @@
-# Cypress-KasirAja
-KasirAja automation testing using Cypress
+# Cypress-DemoWebShop
+
+DemoWebShop automation testing using Cypress
