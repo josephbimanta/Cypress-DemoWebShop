@@ -1,7 +1,7 @@
 import registerPage from "../pageObjects/registerPage"
 
 describe('template spec', () => {
-  it('Verify Register Successfully', () => {
+  it('<TC001> Verify Register Successfully', () => {
     cy.clearCookies()
     cy.visit('https://demowebshop.tricentis.com/')
     cy.get('.ico-register').click()
@@ -14,7 +14,7 @@ describe('template spec', () => {
     registerPage.checkSuccessRegister()
   })
 
-  it('Verify Register Failed - Didnt fill First Name field', () => {
+  it('<TC002> Verify Register Failed - Didnt fill First Name field', () => {
     cy.clearCookies()
     cy.visit('https://demowebshop.tricentis.com/')
     cy.get('.ico-register').click()
@@ -27,7 +27,7 @@ describe('template spec', () => {
     registerPage.checkContainsErrorMessage('First name is required.')
   })
 
-  it('Verify Register Failed - Didnt fill Last Name field', () => {
+  it('<TC003> Verify Register Failed - Didnt fill Last Name field', () => {
     cy.clearCookies()
     cy.visit('https://demowebshop.tricentis.com/')
     cy.get('.ico-register').click()
@@ -40,7 +40,7 @@ describe('template spec', () => {
     registerPage.checkContainsErrorMessage('Last name is required.')
   })
 
-  it('Verify Register Failed - Didnt fill Email field', () => {
+  it('<TC004> Verify Register Failed - Didnt fill Email field', () => {
     cy.clearCookies()
     cy.visit('https://demowebshop.tricentis.com/')
     cy.get('.ico-register').click()
@@ -53,7 +53,7 @@ describe('template spec', () => {
     registerPage.checkContainsErrorMessage('Email is required.')
   })
 
-  it('Verify Register Failed - Didnt fill Email field with valid credentials', () => {
+  it('<TC005> Verify Register Failed - Didnt fill Email field with valid credentials', () => {
     cy.clearCookies()
     cy.visit('https://demowebshop.tricentis.com/')
     cy.get('.ico-register').click()
@@ -66,7 +66,7 @@ describe('template spec', () => {
     registerPage.checkContainsErrorMessage('Wrong email')
   })
 
-  it('Verify Register Failed - Didnt fill Password field', () => {
+  it('<TC006> Verify Register Failed - Didnt fill Password field', () => {
     cy.clearCookies()
     cy.visit('https://demowebshop.tricentis.com/')
     cy.get('.ico-register').click()
@@ -79,7 +79,7 @@ describe('template spec', () => {
     registerPage.checkContainsErrorMessage('Password is required.')
   })
 
-  it('Verify Register Failed - Didnt fill Confirm Password field', () => {
+  it('<TC007> Verify Register Failed - Didnt fill Confirm Password field', () => {
     cy.clearCookies()
     cy.visit('https://demowebshop.tricentis.com/')
     cy.get('.ico-register').click()
@@ -92,7 +92,7 @@ describe('template spec', () => {
     registerPage.checkContainsErrorMessage('Password is required.')
   })
 
-  it.only('Verify Register Failed - Password didnt match POM', () => {
+  it.only('<TC008> Verify Register Failed - Password didnt match POM', () => {
     cy.clearCookies()
     cy.visit('https://demowebshop.tricentis.com/')
     cy.get('.ico-register').click()

@@ -3,7 +3,7 @@ import homePage from "../pageObjects/homePage"
 import myAccountPage from "../pageObjects/myAccountPage"
 
 describe('template spec', () => {
-  it('Verify Edit Customer Info Successfully - Fill First name field', () => {
+  it('<TC015> Verify Edit Customer Info Successfully - Fill First name field', () => {
     cy.clearCookies()
     cy.visit('https://demowebshop.tricentis.com/')
     loginPage.loginWithValidCredentials()
@@ -13,7 +13,7 @@ describe('template spec', () => {
     myAccountPage.verifyChangeFirstName('Bima')
   })
 
-  it('Verify Edit Customer Info Successfully - Fill Last name field', () => {
+  it('<TC016> Verify Edit Customer Info Successfully - Fill Last name field', () => {
     cy.clearCookies()
     cy.visit('https://demowebshop.tricentis.com/')
     loginPage.loginWithValidCredentials()
@@ -23,7 +23,7 @@ describe('template spec', () => {
     myAccountPage.verifyChangeLastName('Ray')
   })
 
-  it('Verify Edit Customer Info Successfully - Fill Email field', () => {
+  it('<TC017> Verify Edit Customer Info Successfully - Fill Email field', () => {
     cy.clearCookies()
     cy.visit('https://demowebshop.tricentis.com/')
     loginPage.loginWithValidCredentials()
@@ -33,7 +33,7 @@ describe('template spec', () => {
     myAccountPage.verifyChangeEmail('joseph.qaa4@gmail.com')
   })
 
-  it('Verify Edit Customer Info Failed - Didnt fill First name field', () => {
+  it('<TC018> Verify Edit Customer Info Failed - Didnt fill First name field', () => {
     cy.clearCookies()
     cy.visit('https://demowebshop.tricentis.com/')
     loginPage.loginWithValidCredentials()
@@ -43,7 +43,7 @@ describe('template spec', () => {
     myAccountPage.checkContainsErrorMessage('First name is required.')
   })
 
-  it('Verify Edit Customer Info Failed - Didnt fill Last name field', () => {
+  it('<TC019> Verify Edit Customer Info Failed - Didnt fill Last name field', () => {
     cy.clearCookies()
     cy.visit('https://demowebshop.tricentis.com/')
     loginPage.loginWithValidCredentials()
@@ -53,7 +53,7 @@ describe('template spec', () => {
     myAccountPage.checkContainsErrorMessage('Last name is required.')
   })
 
-  it('Verify Edit Customer Info Failed - Didnt fill Email field', () => {
+  it('<TC020> Verify Edit Customer Info Failed - Didnt fill Email field', () => {
     cy.clearCookies()
     cy.visit('https://demowebshop.tricentis.com/')
     loginPage.loginWithValidCredentials()
@@ -63,7 +63,7 @@ describe('template spec', () => {
     myAccountPage.checkContainsErrorMessage('Email is required.')
   })
 
-  it.only('Verify Edit Customer Info Failed - Fill Email field with invalid email', () => {
+  it.only('<TC021> Verify Edit Customer Info Failed - Fill Email field with invalid email', () => {
     cy.clearCookies()
     cy.visit('https://demowebshop.tricentis.com/')
     loginPage.loginWithValidCredentials()
